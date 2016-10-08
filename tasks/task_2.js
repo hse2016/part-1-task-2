@@ -15,6 +15,7 @@ let promises = friendIds.map((id) => vkApi.vkProfile(id));
 // Свое ДР мы знаем, поэтому сразу пушим как резолвленый промис
 promises.push(SuperPromise.resolve(me));
 
+
 SuperPromise.all(promises)
     .then((users) => homeCollection.save(users))
     .then(() => console.log('saved'))
