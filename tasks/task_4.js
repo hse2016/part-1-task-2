@@ -2,8 +2,10 @@ let homeCollection = require('lib/homeCollection');
 let SuperPromise = require('lib/SuperPromise');
 let vkApi = require('lib/vkApi');
 
-vkApi
+vkApi.vkProfile('eandreyf')
     .then((user) => {
+        user = user[0];
+
         if (!user.bdate) {
             return SuperPromise.complete;
         }
@@ -16,10 +18,12 @@ vkApi
 // Или
 
 new SuperPromise((resolve, reject, complete) => {
-    vkApi
+    vkApi.vkProfile('123123129')
         .then((user) => {
+            user = user[0];
+
             if (!user.bdate) {
-                complete();
+                complete(); // у пользователя нет ДР, поэтому не сохранит
             }
 
             resolve(user);

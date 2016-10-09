@@ -11,12 +11,18 @@
     "task_1": "NODE_PATH=. node tasks/task_1.js",
     "task_2": "NODE_PATH=. node tasks/task_2.js",
     "task_3": "NODE_PATH=. node tasks/task_3.js",
-    "test_base": "NODE_RUNNER=run1 part-1-task-2-test-1 lib/testPromise",
-    "test_advanced": "NODE_RUNNER=run2 node test.js"
+    "task_4": "NODE_PATH=. node tasks/task_4.js",
+    "test_base": "part-1-task-2-test-1 lib/testPromise",
+    "test_advanced": "part-1-task-2-test-2 lib/testPromise && npm run test_static",
+    "test_static": "part-1-task-2-test-3 lib/testPromise",
+    "test_bonus": "part-1-task-2-test-4 lib/testPromise",
+    "test": "npm run test_advanced && npm run test_bonus"
   },
   "dependencies": {
     "part-1-task-2-test-1": "git://github.com/hse2016/part-1-task-2-test-1.git",
     "part-1-task-2-test-2": "git://github.com/hse2016/part-1-task-2-test-2.git",
+    "part-1-task-2-test-3": "git://github.com/hse2016/part-1-task-2-test-3.git",
+    "part-1-task-2-test-4": "git://github.com/hse2016/part-1-task-2-test-4.git",
     "request": "^2.75.0"
   }
 }
