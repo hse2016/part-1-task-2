@@ -1,3 +1,4 @@
+'use strict';
 let emailer = require('lib/emailer');
 let SuperPromise = require('lib/SuperPromise');
 let vkApi = require('lib/vkApi');
