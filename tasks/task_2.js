@@ -1,3 +1,4 @@
+'use strict';
 let homeCollection = require('lib/homeCollection');
 let SuperPromise = require('lib/SuperPromise');
 let vkApi = require('lib/vkApi');
